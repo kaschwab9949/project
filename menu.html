@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu | Casa Marana</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="brand" href="index.html">
+        <img src="logo 2.jpg" alt="Casa Marana skull logo" />
+        <div class="brand__text">
+          <span class="brand__name">Casa Marana</span>
+          <span class="brand__tagline">Beer · Wine · Spirits · Pizza</span>
+        </div>
+      </a>
+      <input type="checkbox" id="nav-toggle" aria-label="Toggle navigation" />
+      <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true">
+        <span></span>
+      </label>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="photos.html">Photos</a>
+        <a href="visit.html">Visit</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero--inner hero--compact">
+      <div class="container">
+        <p class="hero__eyebrow">Beer · Wine · Spirits · Pizza</p>
+        <h1 class="hero__title">Menu</h1>
+        <p class="hero__subhead">Rotating taps, seasonal cocktails, and Neapolitan-style pies fired hot. Ask the team for today’s favorites—we keep the list fresh.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split-layout">
+        <div class="card">
+          <h2 class="section__heading">What we're pouring and serving</h2>
+          <p class="section__lead">Expect frequent tap changes, small-batch spirits, and pizzas with bold toppings. We keep things lively so every visit feels new.</p>
+          <h3>Beer &amp; Cider</h3>
+          <p>12+ taps on rotation featuring West Coast IPAs, lagers, sours, and crisp ciders. Flights available—just ask.</p>
+          <h3>Cocktails</h3>
+          <p>Seasonal signatures plus the classics. Fresh juice, quality spirits, and bartenders who know their craft.</p>
+          <h3>Wine</h3>
+          <p>Approachable reds, whites, and bubbles picked to pair with pizza and late-night bites.</p>
+          <h3>Pizza &amp; Shareables</h3>
+          <p>Neapolitan-style crust with creative toppings, plus snacks built for the table. Perfect with a pint.</p>
+        </div>
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <img src="24608BB9-545A-485E-A55F-83078BBF008D.jpeg" alt="Fresh cocktail and pizza at Casa Marana" style="height: 100%; width: 100%; object-fit: cover;" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="card" style="text-align: center;">
+          <h3 style="margin-bottom: 12px;">Want today’s tap list?</h3>
+          <p class="section__lead" style="margin-bottom: 18px;">Give us a call and we’ll share what’s pouring right now.</p>
+          <a class="btn btn--primary" href="tel:+15205054870">Call for today’s tap list</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>© <span id="year"></span> Casa Marana</div>
+      <div class="social-links">
+        <a href="https://www.facebook.com/Casa-Marana-Craft-Beer-Wine-1945711358832758/?ref=search">Facebook</a>
+        <a href="https://www.instagram.com/casamarana/">Instagram</a>
+        <a href="https://www.google.com/maps/place/Casa%2BMarana%2BBeer%2B%C2%B7%2BWine%2B%C2%B7%2BSpirits%2B%E2%80%A2%2BPizza/">Google Maps</a>
+        <a href="https://www.youtube.com/channel/UCw5TM1aWRljowAgwXTM6E6A/videos">YouTube</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Casa Marana</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="brand" href="index.html">
+        <img src="logo 2.jpg" alt="Casa Marana skull logo" />
+        <div class="brand__text">
+          <span class="brand__name">Casa Marana</span>
+          <span class="brand__tagline">Beer · Wine · Spirits · Pizza</span>
+        </div>
+      </a>
+      <input type="checkbox" id="nav-toggle" aria-label="Toggle navigation" />
+      <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true">
+        <span></span>
+      </label>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="photos.html">Photos</a>
+        <a href="visit.html">Visit</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero--inner hero--compact">
+      <div class="container">
+        <p class="hero__eyebrow">Reach out</p>
+        <h1 class="hero__title">Contact Casa Marana</h1>
+        <p class="hero__subhead">Have a question about the menu, hosting an event, or tonight’s taps? Send us a note and we’ll get back to you.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split-layout">
+        <div class="card">
+          <form>
+            <div>
+              <label for="name">Name</label>
+              <input id="name" type="text" name="name" placeholder="Your name" required />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" type="email" name="email" placeholder="you@example.com" required />
+            </div>
+            <div>
+              <label for="topic">Topic</label>
+              <select id="topic" name="topic">
+                <option>General question</option>
+                <option>Private event</option>
+                <option>Menu / dietary</option>
+                <option>Booking the bar</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell us how we can help"></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary">Send message</button>
+          </form>
+        </div>
+        <div class="card contact-details">
+          <h2 class="section__heading">Prefer to call or email?</h2>
+          <p class="section__lead">We’re always happy to talk about beer, cocktails, and pizza plans.</p>
+          <p><strong>Phone:</strong> <a href="tel:+15205054870">(520) 505-4870</a></p>
+          <p><strong>Email:</strong> <a href="mailto:casacbw@gmail.com">casacbw@gmail.com</a></p>
+          <p><strong>Address:</strong><br />8225 N Courtney Page Way, Suite 191<br />Marana, AZ 85743</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>© <span id="year"></span> Casa Marana</div>
+      <div class="social-links">
+        <a href="https://www.facebook.com/Casa-Marana-Craft-Beer-Wine-1945711358832758/?ref=search">Facebook</a>
+        <a href="https://www.instagram.com/casamarana/">Instagram</a>
+        <a href="https://www.google.com/maps/place/Casa%2BMarana%2BBeer%2B%C2%B7%2BWine%2B%C2%B7%2BSpirits%2B%E2%80%A2%2BPizza/">Google Maps</a>
+        <a href="https://www.youtube.com/channel/UCw5TM1aWRljowAgwXTM6E6A/videos">YouTube</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

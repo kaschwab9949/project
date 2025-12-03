@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visit | Casa Marana</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="brand" href="index.html">
+        <img src="logo 2.jpg" alt="Casa Marana skull logo" />
+        <div class="brand__text">
+          <span class="brand__name">Casa Marana</span>
+          <span class="brand__tagline">Beer · Wine · Spirits · Pizza</span>
+        </div>
+      </a>
+      <input type="checkbox" id="nav-toggle" aria-label="Toggle navigation" />
+      <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true">
+        <span></span>
+      </label>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="photos.html">Photos</a>
+        <a href="visit.html">Visit</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero--inner hero--compact">
+      <div class="container">
+        <p class="hero__eyebrow">Getting here</p>
+        <h1 class="hero__title">Visit Casa Marana</h1>
+        <p class="hero__subhead">Easy to find off I-10 with plenty of parking. Drop in for lunch, stay late for drinks.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split-layout">
+        <div class="card">
+          <h2 class="section__heading">Hours &amp; Location</h2>
+          <p class="section__lead">8225 N Courtney Page Way, Suite 191<br />Marana, AZ 85743</p>
+          <ul class="hours-list">
+            <li><strong>Sunday – Wednesday:</strong> 10:30 AM – 12:00 AM</li>
+            <li><strong>Thursday – Saturday:</strong> 10:30 AM – 2:00 AM</li>
+          </ul>
+          <div style="margin-top: 16px;">
+            <p><strong>Phone:</strong> <a href="tel:+15205054870">(520) 505-4870</a></p>
+            <p><strong>Email:</strong> <a href="mailto:casacbw@gmail.com">casacbw@gmail.com</a></p>
+          </div>
+        </div>
+        <div class="map-card">
+          <h3 style="margin-bottom: 12px;">Plan your visit</h3>
+          <p style="color: var(--muted); margin-bottom: 16px;">Right off the freeway with easy parking. Perfect for meeting friends, grabbing pizza, or settling in for a late-night cocktail.</p>
+          <a class="btn btn--primary btn--block" href="https://www.google.com/maps/place/Casa%2BMarana%2BBeer%2B%C2%B7%2BWine%2B%C2%B7%2BSpirits%2B%E2%80%A2%2BPizza/">Open in Google Maps</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>© <span id="year"></span> Casa Marana</div>
+      <div class="social-links">
+        <a href="https://www.facebook.com/Casa-Marana-Craft-Beer-Wine-1945711358832758/?ref=search">Facebook</a>
+        <a href="https://www.instagram.com/casamarana/">Instagram</a>
+        <a href="https://www.google.com/maps/place/Casa%2BMarana%2BBeer%2B%C2%B7%2BWine%2B%C2%B7%2BSpirits%2B%E2%80%A2%2BPizza/">Google Maps</a>
+        <a href="https://www.youtube.com/channel/UCw5TM1aWRljowAgwXTM6E6A/videos">YouTube</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
