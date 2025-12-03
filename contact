@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | Casa Marana</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact Casa Marana in Marana, AZ about events, reservations, or questions.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header site-header--inner" id="top">
+    <div class="site-header__overlay"></div>
+
+    <div class="site-header__bar">
+      <div class="shell">
+        <nav class="nav" aria-label="Main navigation">
+          <a href="index.html" class="nav__brand">
+            <img src="logo-casamarana.jpg" alt="Casa Marana skull logo" class="nav__logo">
+            <span class="nav__brand-text">
+              <span class="nav__brand-name">Casa Marana</span>
+              <span class="nav__brand-tagline">Beer · Wine · Spirits · Pizza</span>
+            </span>
+          </a>
+
+          <button
+            class="nav__toggle"
+            type="button"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+          </button>
+
+          <ul class="nav__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="photos.html">Photos</a></li>
+            <li><a href="visit.html">Visit</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="site-header__hero">
+      <div class="shell hero hero--inner">
+        <div>
+          <div class="hero-text__eyebrow">Contact</div>
+          <h1 class="hero-text__title">Get in touch with Casa Marana.</h1>
+          <p class="hero-text__lead">
+            Questions, private events, collaborations, or anything else — drop us a note and we’ll get back to you.
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="shell">
+        <div class="section__eyebrow">Say hello</div>
+        <h2 class="section__title">Send a message.</h2>
+        <p class="section__text section__text--narrow">
+          This form is a front‑end only placeholder. When you’re ready, hook it up to a service like Formspree
+          or your own backend so messages go straight to your inbox.
+        </p>
+
+        <form class="contact-form" action="#" method="post">
+          <div class="contact-form__row">
+            <div class="contact-form__field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name">
+            </div>
+            <div class="contact-form__field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="you@email.com">
+            </div>
+          </div>
+
+          <div class="contact-form__row">
+            <div class="contact-form__field">
+              <label for="topic">What’s this about?</label>
+              <input id="topic" name="topic" type="text" placeholder="Birthday party, game night, collab, etc.">
+            </div>
+          </div>
+
+          <div class="contact-form__row">
+            <div class="contact-form__field contact-form__field--full">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us what you have in mind."></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn--primary">Send message</button>
+        </form>
+
+        <p class="section__text" style="margin-top:1.5rem;">
+          Prefer email? Reach us at
+          <a href="mailto:casacbw@gmail.com">casacbw@gmail.com</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div>
+        <p class="site-footer__brand">Casa Marana</p>
+        <p class="site-footer__text">Beer · Wine · Spirits · Pizza · Marana, AZ</p>
+      </div>
+      <div class="site-footer__links">
+        <a href="index.html">Home</a>
+        <a href="visit.html">Visit</a>
+      </div>
+    </div>
+    <p class="site-footer__legal">
+      © <span id="year"></span> Casa Marana. All rights reserved.
+    </p>
+  </footer>
+
+  <script>
+    (function () {
+      const navToggle = document.querySelector(".nav__toggle");
+      const navLinks = document.querySelector(".nav__links");
+
+      if (navToggle && navLinks) {
+        navToggle.addEventListener("click", function () {
+          const isOpen = navLinks.classList.toggle("nav__links--open");
+          navToggle.classList.toggle("nav__toggle--open", isOpen);
+          navToggle.setAttribute("aria-expanded", String(isOpen));
+        });
+
+        navLinks.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            if (navLinks.classList.contains("nav__links--open")) {
+              navLinks.classList.remove("nav__links--open");
+              navToggle.classList.remove("nav__toggle--open");
+              navToggle.setAttribute("aria-expanded", "false");
+            }
+          });
+        });
+      }
+
+      const yearEl = document.getElementById("year");
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+    })();
+  </script>
+</body>
+</html>
