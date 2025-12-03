@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Photos | Casa Marana</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Photos from Casa Marana bar and pizzeria in Marana, AZ.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header site-header--inner" id="top">
+    <div class="site-header__overlay"></div>
+
+    <div class="site-header__bar">
+      <div class="shell">
+        <nav class="nav" aria-label="Main navigation">
+          <a href="index.html" class="nav__brand">
+            <img src="logo-casamarana.jpg" alt="Casa Marana skull logo" class="nav__logo">
+            <span class="nav__brand-text">
+              <span class="nav__brand-name">Casa Marana</span>
+              <span class="nav__brand-tagline">Beer · Wine · Spirits · Pizza</span>
+            </span>
+          </a>
+
+          <button
+            class="nav__toggle"
+            type="button"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+          </button>
+
+          <ul class="nav__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="photos.html">Photos</a></li>
+            <li><a href="visit.html">Visit</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="site-header__hero">
+      <div class="shell hero hero--inner">
+        <div>
+          <div class="hero-text__eyebrow">Inside Casa Marana</div>
+          <h1 class="hero-text__title">Photos</h1>
+          <p class="hero-text__lead">
+            A look at the space, the people behind the bar, and the energy that makes Casa Marana feel like home.
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="shell">
+        <div class="photo-grid" aria-label="Casa Marana photo gallery">
+          <div class="photo-grid__item">
+            <img src="hero-bar.jpg" alt="Crowded bar at Casa Marana">
+            <div class="photo-grid__caption">Busy night at the bar.</div>
+          </div>
+          <div class="photo-grid__item">
+            <img src="photo-1.jpg" alt="Casa Marana team in front of mural">
+            <div class="photo-grid__caption">The crew that makes it all happen.</div>
+          </div>
+          <div class="photo-grid__item">
+            <img src="photo-2.jpg" alt="Staff and guests having fun at Casa Marana">
+            <div class="photo-grid__caption">Regulars, first‑timers, and lots of laughter.</div>
+          </div>
+          <div class="photo-grid__item">
+            <img src="photo-3.jpg" alt="Bartenders mixing drinks at Casa Marana">
+            <div class="photo-grid__caption">Cocktails, shots, and everything in between.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div>
+        <p class="site-footer__brand">Casa Marana</p>
+        <p class="site-footer__text">Beer · Wine · Spirits · Pizza · Marana, AZ</p>
+      </div>
+      <div class="site-footer__links">
+        <a href="index.html">Home</a>
+        <a href="visit.html">Visit</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <p class="site-footer__legal">
+      © <span id="year"></span> Casa Marana. All rights reserved.
+    </p>
+  </footer>
+
+  <script>
+    (function () {
+      const navToggle = document.querySelector(".nav__toggle");
+      const navLinks = document.querySelector(".nav__links");
+
+      if (navToggle && navLinks) {
+        navToggle.addEventListener("click", function () {
+          const isOpen = navLinks.classList.toggle("nav__links--open");
+          navToggle.classList.toggle("nav__toggle--open", isOpen);
+          navToggle.setAttribute("aria-expanded", String(isOpen));
+        });
+
+        navLinks.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            if (navLinks.classList.contains("nav__links--open")) {
+              navLinks.classList.remove("nav__links--open");
+              navToggle.classList.remove("nav__toggle--open");
+              navToggle.setAttribute("aria-expanded", "false");
+            }
+          });
+        });
+      }
+
+      const yearEl = document.getElementById("year");
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+    })();
+  </script>
+</body>
+</html>
