@@ -6,362 +6,171 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta
     name="description"
-    content="Casa Marana is your local Marana bar and pizzeria serving craft beer, cocktails, wine, and authentic Neapolitan-style pizza with an American twist."
-  >
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@500;700&display=swap"
-    rel="stylesheet"
+    content="Casa Marana is your neighborhood bar and pizzeria in Marana, AZ serving craft beer, cocktails, wine, and Neapolitan-style pizza with an American twist."
   >
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="page page--home">
   <a href="#main" class="skip-link">Skip to main content</a>
 
-  <!-- HERO / HEADER -->
-  <header class="hero" id="top">
-    <div class="hero__overlay"></div>
+  <header class="site-header site-header--home" id="top">
+    <div class="site-header__overlay"></div>
 
-    <div class="hero__nav-bar">
-      <nav class="nav" aria-label="Main navigation">
-        <a href="#top" class="nav__brand">
-          <!-- If you ever upload your logo file to this repo,
-               replace the span with an <img> tag. -->
-          <span class="nav__logo-mark">CM</span>
-          <span class="nav__brand-text">
-            <span class="nav__brand-name">Casa Marana</span>
-            <span class="nav__brand-tagline">Beer · Wine · Spirits · Pizza</span>
-          </span>
-        </a>
+    <div class="site-header__bar">
+      <div class="shell">
+        <nav class="nav" aria-label="Main navigation">
+          <a href="index.html" class="nav__brand">
+            <img src="logo-casamarana.jpg" alt="Casa Marana skull logo" class="nav__logo">
+            <span class="nav__brand-text">
+              <span class="nav__brand-name">Casa Marana</span>
+              <span class="nav__brand-tagline">Beer · Wine · Spirits · Pizza</span>
+            </span>
+          </a>
 
-        <button
-          class="nav__toggle"
-          type="button"
-          aria-label="Toggle navigation"
-          aria-expanded="false"
-          aria-controls="primary-nav"
-        >
-          <span></span>
-          <span></span>
-        </button>
+          <button
+            class="nav__toggle"
+            type="button"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+          </button>
 
-        <ul class="nav__links" id="primary-nav">
-          <li><a href="#about">About</a></li>
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="#photos">Photos</a></li>
-          <li><a href="#visit">Visit</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+          <ul class="nav__links" id="primary-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="photos.html">Photos</a></li>
+            <li><a href="visit.html">Visit</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
 
-    <div class="hero__inner">
-      <div class="hero__content">
-        <p class="hero__eyebrow">Marana, Arizona</p>
-        <h1 class="hero__title">Welcome home to your neighborhood bar.</h1>
-        <p class="hero__lead">
-          Exceptional pizza, incredible cocktails, and unforgettable moments —
-          Casa Marana is where Marana comes to drink, eat, and hang out.
-        </p>
+    <div class="site-header__hero">
+      <div class="hero hero--home">
+        <div class="shell hero-text">
+          <div class="hero-text__eyebrow">Beer · Wine · Spirits · Pizza</div>
+          <h1 class="hero-text__title">Welcome home to Casa Marana.</h1>
+          <p class="hero-text__lead">
+            Exceptional pizza, incredible cocktails, and unforgettable nights in the heart of Marana, Arizona.
+          </p>
+          <p class="hero-text__sub">Local business · Local staff · Local customers.</p>
 
-        <p class="hero__sub">
-          Local business · Local staff · Local customers.
-        </p>
+          <div class="hero-buttons">
+            <a href="menu.html" class="btn btn--primary">View Menu</a>
+            <a href="visit.html" class="btn btn--ghost">Hours &amp; Location</a>
+          </div>
 
-        <div class="hero__cta-row">
-          <a href="#menu" class="btn btn--primary">View Menu</a>
-          <a href="#visit" class="btn btn--ghost">Hours &amp; Location</a>
+          <div class="hero-meta">
+            <div class="hero-meta__block">
+              <div class="hero-meta__label">Hours</div>
+              <div class="hero-meta__value">
+                Sun – Wed · 10:30 AM – 12:00 AM<br>
+                Thu – Sat · 10:30 AM – 2:00 AM
+              </div>
+            </div>
+            <div class="hero-meta__block">
+              <div class="hero-meta__label">Address</div>
+              <div class="hero-meta__value">
+                8225 N Courtney Page Way, Suite 191<br>
+                Marana, AZ 85743
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="hero__meta-row">
-          <div class="hero__meta">
-            <span class="hero__meta-label">Hours today</span>
-            <span class="hero__meta-value">
-              Sunday – Wednesday · 10:30 AM – 12:00 AM<br>
-              Thursday – Saturday · 10:30 AM – 2:00 AM
-            </span>
-          </div>
-          <div class="hero__meta hero__meta--right">
-            <span class="hero__meta-label">Location</span>
-            <span class="hero__meta-value">
-              8225 N Courtney Page Way, Suite 191<br>
-              Marana, AZ 85743
-            </span>
-          </div>
+        <div class="shell hero-panel">
+          <h2 class="hero-panel__title">Your neighborhood bar &amp; pizzeria.</h2>
+          <p class="hero-panel__text">
+            Laid‑back, high‑energy, and built around regulars, great drinks, and pizza that actually matters.
+          </p>
+          <ul class="hero-panel__list">
+            <li>Rotating craft beer, cider, and wine.</li>
+            <li>Full cocktail program &amp; zero‑proof options.</li>
+            <li>Neapolitan‑style pizza with an American twist.</li>
+            <li>Sports, events, and late‑night hangs.</li>
+          </ul>
         </div>
       </div>
-
-      <aside class="hero__aside" aria-label="Highlights">
-        <div class="hero-card">
-          <p class="hero-card__label">On tap &amp; behind the bar</p>
-          <p class="hero-card__title">Craft beer, cocktails &amp; more.</p>
-          <p class="hero-card__text">
-            Rotating taps, wine, spirits, and zero-proof options. Built for
-            regulars, friends, and late-night stories.
-          </p>
-        </div>
-        <div class="hero-card hero-card--secondary">
-          <p class="hero-card__label">In the oven</p>
-          <p class="hero-card__title">Neapolitan pizza with an American twist.</p>
-          <p class="hero-card__text">
-            Hand-crafted pies, shareable plates, and a full bar — all in one spot.
-          </p>
-        </div>
-      </aside>
     </div>
   </header>
 
   <main id="main">
-    <!-- ABOUT -->
-    <section id="about" class="section">
+    <section class="section">
       <div class="shell">
-        <div class="section__eyebrow">ABOUT CASA MARANA</div>
-        <div class="section__two-column">
+        <div class="split-grid">
           <div>
-            <h2 class="section__title">Your local Marana bar and pizzeria.</h2>
+            <div class="section__eyebrow">ABOUT CASA MARANA</div>
+            <h2 class="section__title">The spot locals recommend first.</h2>
             <p class="section__text">
-              Casa Marana is built around community, quality, and a laid‑back atmosphere
-              that feels like home. We’re a locally owned bar serving craft cocktails,
-              rotating draft beer, great wine, and authentic Neapolitan pizza with an
-              American twist. :contentReference[oaicite:2]{index=2}
+              Casa Marana is a locally owned bar and pizzeria focused on community, quality, and a vibe that feels like home.
+              Craft beer, cocktails, wine, and pizza all in one place, with a staff that actually remembers your name.
             </p>
             <p class="section__text">
-              Whether you’re meeting friends or making new ones, grabbing a quick bite,
-              catching a game, or searching for the best bar in Marana — you’re in the
-              right place. :contentReference[oaicite:3]{index=3}
+              Whether you’re pre‑gaming, watching the game, hosting friends, or just grabbing a drink after work,
+              this is where Marana comes to hang out.
             </p>
           </div>
-          <div class="section__highlights">
-            <span class="pill">Rotating craft beer</span>
-            <span class="pill">Full cocktail program</span>
-            <span class="pill">Authentic pizza</span>
-            <span class="pill">Late-night hours</span>
-            <span class="pill">Local &amp; independent</span>
-          </div>
+          <aside class="info-card">
+            <div class="info-card__label">Quick snapshot</div>
+            <div class="info-card__main">Beer · Wine · Spirits · Pizza</div>
+            <p class="info-card__sub">
+              25+ taps, thoughtful cocktails, and a menu built to share. Open every day and late on weekends.
+            </p>
+          </aside>
         </div>
       </div>
     </section>
 
-    <!-- MENU -->
-    <section id="menu" class="section section--panel">
-      <div class="shell section--panel__inner">
-        <div class="section--panel__content">
-          <div class="section__eyebrow">DRINKS &amp; PIZZA</div>
-          <h2 class="section__title">Everything you want at the bar, plus pizza that actually matters.</h2>
-          <p class="section__text">
-            25 rotating beer taps, wine, spirits, and cocktails built with fresh juice
-            and thoughtful ingredients — plus pizza that keeps up with what’s in your glass. :contentReference[oaicite:4]{index=4}
-          </p>
-          <div class="feature-list">
-            <div class="feature-list__item">
-              <h3 class="feature-list__title">Rotating beer wall</h3>
-              <p class="feature-list__text">
-                Local Arizona breweries, regional standouts, and one‑off releases. If
-                you haven’t been in a while, the lineup has changed.
-              </p>
-            </div>
-            <div class="feature-list__item">
-              <h3 class="feature-list__title">Cocktails &amp; spirits</h3>
-              <p class="feature-list__text">
-                Classic builds, seasonal signatures, American whiskey, and zero‑proof
-                options so everyone has something worth sipping.
-              </p>
-            </div>
-            <div class="feature-list__item">
-              <h3 class="feature-list__title">Pizza &amp; shareables</h3>
-              <p class="feature-list__text">
-                Neapolitan‑inspired pizza with an American twist, plus small plates that
-                disappear as soon as they hit the table.
-              </p>
-            </div>
-          </div>
-          <div class="section__actions">
-            <!-- Replace this href with your real online menu or PDF -->
-            <a href="#" class="btn btn--primary">View Full Menu (PDF)</a>
-            <p class="section__note">
-              When you’re ready, update this button to link to your live menu.
-            </p>
-          </div>
-        </div>
-
-        <div class="menu-media" aria-hidden="true">
-          <!-- Menu image from your current site -->
-          <div class="menu-media__card">
-            <img
-              src="https://images.squarespace-cdn.com/content/v1/5ac3d7029f87708502cf28bb/77096bdd-da1d-4f8c-99c4-1f8ef158e3de/FILE_5190_Page_2.jpg"
-              alt="Casa Marana pizza and menu board"
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PHOTOS / VIBE -->
-    <section id="photos" class="section section--vibe">
+    <section class="section section--alt">
       <div class="shell">
-        <div class="section__eyebrow">INSIDE CASA MARANA</div>
-        <h2 class="section__title">The bar, the energy, the pizza.</h2>
+        <div class="section__eyebrow">WHAT YOU'LL FIND</div>
+        <h2 class="section__title">Drinks dialed in. Pizza that keeps up.</h2>
         <p class="section__text section__text--narrow">
-          Warm lighting, real bar games, sports on, and a mix of regulars and first‑timers.
-          Here’s a taste of the space — swap these photos for your own at any time.
+          You don’t have to pick between the “good drinks” place and the “good food” place.
+          Casa Marana is both — with plenty of room for big groups, date nights, and everything in between.
         </p>
 
-        <div class="photo-grid" aria-label="Casa Marana photo gallery">
-          <figure class="photo-grid__item photo-grid__item--large">
-            <img
-              src="https://images.squarespace-cdn.com/content/v1/5ac3d7029f87708502cf28bb/1654822490678-AZKCV8ZW2CXCCOAHIU0T/CasaMaranaInterior1Day.jpg"
-              alt="Interior of Casa Marana bar during the day"
-            >
-            <figcaption>Spacious bar with a laid‑back feel.</figcaption>
-          </figure>
-          <figure class="photo-grid__item">
-            <img
-              src="https://images.squarespace-cdn.com/content/v1/5ac3d7029f87708502cf28bb/1654823025104-B6BXUHK98BXB73SVTDJO/DSC06194.jpg"
-              alt="Close‑up of beer taps at Casa Marana"
-            >
-            <figcaption>Rotating taps with local and regional favorites.</figcaption>
-          </figure>
-          <figure class="photo-grid__item">
-            <img
-              src="https://images.squarespace-cdn.com/content/v1/5ac3d7029f87708502cf28bb/1654822534331-OGDE0Z4D0VSHSA0XO4KB/Background.jpg"
-              alt="Casa Marana bar at night"
-            >
-            <figcaption>Nighttime energy and cocktails done right.</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- VISIT -->
-    <section id="visit" class="section section--visit">
-      <div class="shell visit">
-        <div class="visit__info">
-          <div class="section__eyebrow">VISIT</div>
-          <h2 class="section__title">Plan your night at Casa Marana.</h2>
-          <p class="section__text">
-            Easy to find, easy to park, and always worth the drive. Located in the
-            Arizona Pavilions area of Marana, just off I‑10.
-          </p>
-
-          <div class="visit__grid">
-            <div class="visit__block">
-              <h3 class="visit__label">Address</h3>
-              <p class="visit__value">
-                8225 N Courtney Page Way, Suite 191<br>
-                Marana, AZ 85743
-              </p>
-            </div>
-            <div class="visit__block">
-              <h3 class="visit__label">Hours</h3>
-              <p class="visit__value">
-                Sunday – Wednesday · 10:30 AM – 12:00 AM<br>
-                Thursday – Saturday · 10:30 AM – 2:00 AM
-              </p>
-            </div>
-            <div class="visit__block">
-              <h3 class="visit__label">Contact</h3>
-              <p class="visit__value">
-                Phone: <a href="tel:+15205054870">(520) 505‑4870</a><br>
-                Email: <a href="mailto:casacbw@gmail.com">casacbw@gmail.com</a>
-              </p>
-            </div>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3 class="feature-card__title">Craft beer &amp; cider</h3>
+            <p class="feature-card__text">
+              Rotating taps with local Arizona breweries, regional standouts, and rare one‑offs.
+              If you haven’t been in a while, the lineup has changed.
+            </p>
           </div>
-
-          <div class="section__actions">
-            <a
-              href="https://www.google.com/maps/place/Casa%2BMarana%2BBeer%2B%C2%B7%2BWine%2B%C2%B7%2BSpirits%2B%E2%80%A2%2BPizza/%4032.3568943%2C-111.0952061%2C15z/data%3D%214m6%213m5%211s0x86d5e1a90153717d%3A0x4f8d3e620fbe0844%218m2%213d32.3568943%214d-111.0952061%2116s%2Fg%2F11f6g1glc0?entry=ttu"
-              class="btn btn--primary"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Get Directions
-            </a>
+          <div class="feature-card">
+            <h3 class="feature-card__title">Cocktails &amp; spirits</h3>
+            <p class="feature-card__text">
+              Classics, signatures, and zero‑proof builds made with fresh ingredients.
+              Whiskey lovers and tequila fans are both covered.
+            </p>
           </div>
-        </div>
-
-        <div class="visit__map" aria-hidden="true">
-          <div class="visit__map-inner">
-            <p class="visit__map-title">Map preview</p>
-            <p class="visit__map-text">
-              Drop your Google Maps embed here later if you want a live map.
+          <div class="feature-card">
+            <h3 class="feature-card__title">Neapolitan‑style pizza</h3>
+            <p class="feature-card__text">
+              Authentic Neapolitan‑style pies with an American twist, plus shareables that disappear
+              as fast as they hit the table.
             </p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section section--contact">
-      <div class="shell">
-        <div class="section__eyebrow">CONTACT</div>
-        <h2 class="section__title">Host an event or have a question?</h2>
-        <p class="section__text section__text--narrow">
-          Reach out about group reservations, private events, collaborations, or anything
-          else Casa Marana. Hook this form up to your email provider or a service like
-          Formspree when you’re ready.
-        </p>
-
-        <form class="contact-form" action="#" method="post">
-          <div class="contact-form__row">
-            <div class="contact-form__field">
-              <label for="name">Name</label>
-              <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name">
-            </div>
-            <div class="contact-form__field">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" autocomplete="email" placeholder="you@email.com">
-            </div>
-          </div>
-          <div class="contact-form__row">
-            <div class="contact-form__field contact-form__field--full">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="4" placeholder="Tell us what you have in mind."></textarea>
-            </div>
-          </div>
-          <button type="submit" class="btn btn--primary">Send Message</button>
-        </form>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="shell site-footer__inner">
+    <div class="site-footer__inner">
       <div>
         <p class="site-footer__brand">Casa Marana</p>
         <p class="site-footer__text">Beer · Wine · Spirits · Pizza · Marana, AZ</p>
       </div>
       <div class="site-footer__links">
-        <a
-          href="https://www.facebook.com/Casa-Marana-Craft-Beer-Wine-1945711358832758/?ref=search"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Facebook
-        </a>
-        <a
-          href="https://www.instagram.com/casamarana/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Instagram
-        </a>
-        <a
-          href="https://www.google.com/maps/place/Casa%2BMarana%2BBeer%2B%C2%B7%2BWine%2B%C2%B7%2BSpirits%2B%E2%80%A2%2BPizza/%4032.3568943%2C-111.0952061%2C15z/data%3D%214m6%213m5%211s0x86d5e1a90153717d%3A0x4f8d3e620fbe0844%218m2%213d32.3568943%214d-111.0952061%2116s%2Fg%2F11f6g1glc0?entry=ttu"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Google Maps
-        </a>
-        <a
-          href="https://www.youtube.com/channel/UCw5TM1aWRljowAgwXTM6E6A/videos"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          YouTube
-        </a>
-        <a href="#top">Back to top</a>
+        <a href="https://www.facebook.com/Casa-Marana-Craft-Beer-Wine-1945711358832758/?ref=search" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://www.instagram.com/casamarana/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.google.com/maps/place/Casa%2BMarana%2BBeer%2B%C2%B7%2BWine%2B%C2%B7%2BSpirits%2B%E2%80%A2%2BPizza/%4032.3568943%2C-111.0952061%2C15z/data%3D%214m6%213m5%211s0x86d5e1a90153717d%3A0x4f8d3e620fbe0844%218m2%213d32.3568943%214d-111.0952061%2116s%2Fg%2F11f6g1glc0?entry=ttu" target="_blank" rel="noopener noreferrer">Google Maps</a>
+        <a href="https://www.youtube.com/channel/UCw5TM1aWRljowAgwXTM6E6A/videos" target="_blank" rel="noopener noreferrer">YouTube</a>
       </div>
     </div>
     <p class="site-footer__legal">
@@ -371,30 +180,30 @@
 
   <script>
     (function () {
-      const navToggle = document.querySelector('.nav__toggle');
-      const navLinks = document.querySelector('.nav__links');
+      const navToggle = document.querySelector(".nav__toggle");
+      const navLinks = document.querySelector(".nav__links");
 
       if (navToggle && navLinks) {
-        navToggle.addEventListener('click', () => {
-          const isOpen = navLinks.classList.toggle('nav__links--open');
-          navToggle.classList.toggle('nav__toggle--open', isOpen);
-          navToggle.setAttribute('aria-expanded', String(isOpen));
+        navToggle.addEventListener("click", function () {
+          const isOpen = navLinks.classList.toggle("nav__links--open");
+          navToggle.classList.toggle("nav__toggle--open", isOpen);
+          navToggle.setAttribute("aria-expanded", String(isOpen));
         });
 
-        navLinks.querySelectorAll('a').forEach((link) => {
-          link.addEventListener('click', () => {
-            if (navLinks.classList.contains('nav__links--open')) {
-              navLinks.classList.remove('nav__links--open');
-              navToggle.classList.remove('nav__toggle--open');
-              navToggle.setAttribute('aria-expanded', 'false');
+        navLinks.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            if (navLinks.classList.contains("nav__links--open")) {
+              navLinks.classList.remove("nav__links--open");
+              navToggle.classList.remove("nav__toggle--open");
+              navToggle.setAttribute("aria-expanded", "false");
             }
           });
         });
       }
 
-      const yearSpan = document.getElementById('year');
-      if (yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
+      const yearEl = document.getElementById("year");
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
       }
     })();
   </script>
