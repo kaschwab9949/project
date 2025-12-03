@@ -1,133 +1,96 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Photos | Casa Marana</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Photos from Casa Marana bar and pizzeria in Marana, AZ.">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <a href="#main" class="skip-link">Skip to main content</a>
-
-  <header class="site-header site-header--inner" id="top">
-    <div class="site-header__overlay"></div>
-
-    <div class="site-header__bar">
-      <div class="shell">
-        <nav class="nav" aria-label="Main navigation">
-          <a href="index.html" class="nav__brand">
-            <img src="logo-casamarana.jpg" alt="Casa Marana skull logo" class="nav__logo">
-            <span class="nav__brand-text">
-              <span class="nav__brand-name">Casa Marana</span>
-              <span class="nav__brand-tagline">Beer · Wine · Spirits · Pizza</span>
-            </span>
-          </a>
-
-          <button
-            class="nav__toggle"
-            type="button"
-            aria-label="Toggle navigation"
-            aria-expanded="false"
-          >
-            <span></span>
-            <span></span>
-          </button>
-
-          <ul class="nav__links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="photos.html">Photos</a></li>
-            <li><a href="visit.html">Visit</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-
-    <div class="site-header__hero">
-      <div class="shell hero hero--inner">
-        <div>
-          <div class="hero-text__eyebrow">Inside Casa Marana</div>
-          <h1 class="hero-text__title">Photos</h1>
-          <p class="hero-text__lead">
-            A look at the space, the people behind the bar, and the energy that makes Casa Marana feel like home.
-          </p>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main id="main">
-    <section class="section">
-      <div class="shell">
-        <div class="photo-grid" aria-label="Casa Marana photo gallery">
-          <div class="photo-grid__item">
-            <img src="hero-bar.jpg" alt="Crowded bar at Casa Marana">
-            <div class="photo-grid__caption">Busy night at the bar.</div>
-          </div>
-          <div class="photo-grid__item">
-            <img src="photo-1.jpg" alt="Casa Marana team in front of mural">
-            <div class="photo-grid__caption">The crew that makes it all happen.</div>
-          </div>
-          <div class="photo-grid__item">
-            <img src="photo-2.jpg" alt="Staff and guests having fun at Casa Marana">
-            <div class="photo-grid__caption">Regulars, first‑timers, and lots of laughter.</div>
-          </div>
-          <div class="photo-grid__item">
-            <img src="photo-3.jpg" alt="Bartenders mixing drinks at Casa Marana">
-            <div class="photo-grid__caption">Cocktails, shots, and everything in between.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="site-footer__inner">
-      <div>
-        <p class="site-footer__brand">Casa Marana</p>
-        <p class="site-footer__text">Beer · Wine · Spirits · Pizza · Marana, AZ</p>
-      </div>
-      <div class="site-footer__links">
-        <a href="index.html">Home</a>
-        <a href="visit.html">Visit</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
-    <p class="site-footer__legal">
-      © <span id="year"></span> Casa Marana. All rights reserved.
-    </p>
-  </footer>
-
-  <script>
-    (function () {
-      const navToggle = document.querySelector(".nav__toggle");
-      const navLinks = document.querySelector(".nav__links");
-
-      if (navToggle && navLinks) {
-        navToggle.addEventListener("click", function () {
-          const isOpen = navLinks.classList.toggle("nav__links--open");
-          navToggle.classList.toggle("nav__toggle--open", isOpen);
-          navToggle.setAttribute("aria-expanded", String(isOpen));
-        });
-
-        navLinks.querySelectorAll("a").forEach(function (link) {
-          link.addEventListener("click", function () {
-            if (navLinks.classList.contains("nav__links--open")) {
-              navLinks.classList.remove("nav__links--open");
-              navToggle.classList.remove("nav__toggle--open");
-              navToggle.setAttribute("aria-expanded", "false");
-            }
-          });
-        });
-      }
-
-      const yearEl = document.getElementById("year");
-      if (yearEl) {
-        yearEl.textContent = new Date().getFullYear();
-      }
-    })();
-  </script>
-</body>
-</html>
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/photos.html b/photos.html
+new file mode 100644
+index 0000000000000000000000000000000000000000..33da7d7f6991b9512a967da038c958e8977a4456
+--- /dev/null
++++ b/photos.html
+@@ -0,0 +1,86 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++  <meta charset="UTF-8" />
++  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++  <title>Photos | Casa Marana</title>
++  <link rel="preconnect" href="https://fonts.googleapis.com" />
++  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
++  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
++  <link rel="stylesheet" href="styles.css" />
++</head>
++<body>
++  <header class="site-header">
++    <div class="container nav-bar">
++      <a class="brand" href="index.html">
++        <img src="logo-casamarana.jpg" alt="Casa Marana skull logo" />
++        <div class="brand__text">
++          <span class="brand__name">Casa Marana</span>
++          <span class="brand__tagline">Beer · Wine · Spirits · Pizza</span>
++        </div>
++      </a>
++      <input type="checkbox" id="nav-toggle" aria-label="Toggle navigation" />
++      <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true">
++        <span></span>
++      </label>
++      <nav class="nav-links">
++        <a href="index.html">Home</a>
++        <a href="menu.html">Menu</a>
++        <a href="photos.html">Photos</a>
++        <a href="visit.html">Visit</a>
++        <a href="contact.html">Contact</a>
++      </nav>
++    </div>
++  </header>
++
++  <main>
++    <section class="hero hero--inner hero--compact">
++      <div class="container">
++        <p class="hero__eyebrow">Inside the bar</p>
++        <h1 class="hero__title">Photos</h1>
++        <p class="hero__subhead">The energy, the team, and the late-night vibe—here’s a glimpse of Casa Marana.</p>
++      </div>
++    </section>
++
++    <section class="section">
++      <div class="container photo-grid">
++        <div class="photo-card">
++          <img src="hero-bar.jpg" alt="Busy night at the bar" />
++          <div class="photo-card__caption">Busy night at the bar</div>
++        </div>
++        <div class="photo-card">
++          <img src="photo-1.jpg" alt="Craft cocktails being prepared" />
++          <div class="photo-card__caption">Cocktails shaken and stirred</div>
++        </div>
++        <div class="photo-card">
++          <img src="photo-2.jpg" alt="Casa Marana crew smiling" />
++          <div class="photo-card__caption">The crew that keeps the night moving</div>
++        </div>
++        <div class="photo-card">
++          <img src="photo-3.jpg" alt="Pizza fresh from the oven" />
++          <div class="photo-card__caption">Neapolitan-style pizzas right from the oven</div>
++        </div>
++        <div class="photo-card">
++          <img src="photo-4.jpg" alt="Guests enjoying drinks" />
++          <div class="photo-card__caption">Friends, regulars, and new faces</div>
++        </div>
++      </div>
++    </section>
++  </main>
++
++  <footer class="footer">
++    <div class="container footer__inner">
++      <div>© <span id="year"></span> Casa Marana</div>
++      <div class="social-links">
++        <a href="https://www.facebook.com/Casa-Marana-Craft-Beer-Wine-1945711358832758/?ref=search">Facebook</a>
++        <a href="https://www.instagram.com/casamarana/">Instagram</a>
++        <a href="https://www.google.com/maps/place/Casa%2BMarana%2BBeer%2B%C2%B7%2BWine%2B%C2%B7%2BSpirits%2B%E2%80%A2%2BPizza/">Google Maps</a>
++        <a href="https://www.youtube.com/channel/UCw5TM1aWRljowAgwXTM6E6A/videos">YouTube</a>
++      </div>
++    </div>
++  </footer>
++  <script>
++    document.getElementById('year').textContent = new Date().getFullYear();
++  </script>
++</body>
++</html>
+ 
+EOF
+)
